@@ -10,7 +10,6 @@ const calcularSuma = (numero) => {
 }
 const Operacion = () => {
     const numero = document.getElementById('num_input').value
-    console.log('numero ingresado por el usuario', numero)
     const resultado = calcularSuma(numero)
     document.getElementById('result').innerHTML = "La suma de los múltiplos de 3 o 5 menores que " + numero + " es: " + resultado;
 }
