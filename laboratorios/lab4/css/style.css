@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: "Open Sans", sans-serif;
+}
+
+
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.card__container {
+    margin-top: 3rem;
+    background-color: #F0F0F0;
+    height: 100%;
+    box-shadow: 0px 5px 10px 0px grey;
+}
+
+.form__fibonassi__container {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.field__card {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+}
+
+.field__card__label {
+    font-size: 18px;
+    font-weight: semibold;
+}
+
+.field__card__input {
+    width: 30%;
+    height: 34px;
+    border-radius: 5px;
+}
+
+.button__container {
+    display: flex;
+    align-items: end;
+    justify-content: flex-end;
+    color: white;
+    padding: 1rem;
+
+}
+
+.button__container__fibonassi {
+    background-color: #9E0101;
+    cursor: pointer;
+    color: rgba(250, 250, 250, 0.9);
+    font-size: 18px;
+    width: 30%;
+    height: 2.1rem;
+    box-shadow: 0px 5px 10px 0px rgba(36, 35, 35, 0.5);
+}
+
+.container__result {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin: 2rem 0;
+    position: relative;
+}
+
+
+.container__result__span {
+    user-select: none;
+    max-width: 100%;
+    height: 200px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 5px 10px 0px rgba(36, 35, 35, 0.5);
+    position: relative;
+    border-radius: 10px;
+}
+
+.container__result__image {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+}
