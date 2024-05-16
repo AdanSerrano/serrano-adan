@@ -54,7 +54,7 @@ const VotingApp = (() => {
                 <div class="container__result__span">
                     <span class="candidate__name">${candidate.name}</span>
                     <span class="candidate__votes">
-                        <span class="color-circle" style="background-color: ${candidate.color}">    </span>
+                        <span class="color-circle" style="background-color: ${candidate.color}"></span>
                         <p>
                             ${candidate.votes} votos
                         </p>
