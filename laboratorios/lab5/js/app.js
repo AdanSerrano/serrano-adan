@@ -51,15 +51,16 @@ const VotingApp = (() => {
         },
         renderCandidates() {
             App.htmlElements.candidatesList.innerHTML = App.candidates.map((candidate, index) => `
-                <div class="candidate">
-                    <div class="candidate__info" style="background-color: ${candidate.color}">
-                        <span class="candidate__name">${candidate.name}</span>
-                        <span class="candidate__votes">${candidate.votes} votos</span>
-                    </div>
-                    <div class="candidate__button-container">
-                        <button class="vote__button" data-index="${index}">Votar</button>
-                        <button class="delete__button" data-index="${index}">Eliminar</button>
-                    </div>
+                <div class="container__result__span">
+                    <span class="candidate__name">${candidate.name}</span>
+                    <span class="candidate__votes">
+                        <span class="color-circle" style="background-color: ${candidate.color}"></span>
+                        <p>
+                            ${candidate.votes} votos
+                        </p>
+                    </span>
+                    <img src="./image/Like.svg" alt="like" class="vote__button" data-index="${index})">
+                    <img src="./image/Delete icon.svg" alt="Delete" class="delete__button" data-index="${index})">
                 </div>
             `).join('');
         },
