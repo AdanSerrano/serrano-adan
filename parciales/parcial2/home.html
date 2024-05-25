@@ -12,39 +12,46 @@
 <body>
     <header id="navbarContainer"></header>
     <main>
-        <section class="main">
-            <section class="container">
-                <div class="container__div">
-                    <form id="form" class="container__form"> <!-- Added the id here -->
-                        <h1>💸 Registrar Transacciones</h1>
-                        <div class="container__form__div">
-                            <label class="form__label">Monto:</label>
-                            <input type="text" name="monto" class="container__form__input form__input" id="inputMonto"
-                                required />
-                            <!-- un select que tenga ingreso o egreso para el usuario y que por default tenga seleccionar tipo de transaccion -->
-                            <label class="form__container__label">Tipo de transaccion:</label>
-                            <select name="tipo" class="container__form__input form__input" id="inputTipo">
-                                <option value="0">Seleccionar tipo de transaccion</option>
-                                <option value="1">Ingreso</option>
-                                <option value="2">Egreso</option>
-                            </select>
-                            <label class="form__label">Fecha:</label>
-                            <input type="date" name="fecha" class="container__form__input form__input"
-                                id="inputFecha" />
-                            <label class="form__label">Descripción:</label>
-                            <input type="text" name="descripcion" class="container__form__input form__input"
-                                id="inputDescripcion" />
-                            <button type="submit" class="container__div__button">Actualizar</button>
-                        </div>
-                    </form>
-                </div>
-                </div>
+        <section class="main_2">
+            <section class="container_2">
+                <section class="flex-center">
+                    <section class="container">
+                        <section class="container__div">
+                            <form id="form" class="container__form"> <!-- Added the id here -->
+                                <h1>💸 Registrar Transacciones</h1>
+                                <section class="container__form__div">
+                                    <label class="form__label">Monto:</label>
+                                    <input type="number" name="monto" class="container__form__input form__input"
+                                        id="inputMonto" required />
+                                    <label class="form__container__label">Tipo de transaccion:</label>
+                                    <select name="tipo" class="container__form__input form__input" id="inputTipo"
+                                        required>
+                                        <option value="0">Seleccionar tipo de transaccion</option>
+                                        <option value="1">Ingreso</option>
+                                        <option value="2">Egreso</option>
+                                    </select>
+                                    <label class="form__label">Fecha:</label>
+                                    <input type="date" name="fecha" class="container__form__input form__input"
+                                        id="inputFecha" required />
+                                    <label class="form__label">Descripción:</label>
+                                    <input type="text" name="descripcion" class="container__form__input form__input"
+                                        id="inputDescripcion" required />
+                                    <button type="submit" class="container__div__button">Actualizar</button>
+                                </section>
+                            </form>
+                        </section>
+                    </section>
+                </section>
+                <section class="flex-center">
+                    <canvas id="chartCanvas" width="400" height="300"></canvas>
+                </section>
             </section>
+        </section>
 
     </main>
     <section class="container__div__table">
-        <div class="rounded-md border">
-            <div class="relative w-full overflow-auto">
+        <section class=" border">
+            <article class="rounded-md relative w-full overflow-auto">
                 <table class="w-full caption-bottom text-sm" id="dataTable">
                     <thead class="[&amp;_tr]:border-b">
                         <tr class="border-b transition-colors hover-bg-muted-50 data-state-selected-bg-muted"
@@ -68,8 +75,10 @@
                         </tr>
                     </thead>
                 </table>
-            </div>
-        </div>
+            </article>
+            <article id="noDataMessage" style="display: none;" class="text-center text-red-500 py-4">No hay ningún dato
+                registrado.</article>
+        </section>
     </section>
     <script src="./js/authentication.js"></script>
     <script src="./js/home.js"></script>
