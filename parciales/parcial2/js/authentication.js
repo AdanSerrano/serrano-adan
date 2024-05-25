@@ -56,6 +56,7 @@
                 localStorage.setItem('users', JSON.stringify(users));
                 localStorage.setItem('currentUser', JSON.stringify([username, email]));
                 alert('Configuración actualizada');
+                window.location.reload();
                 // window.location.href = 'profile.html';
             } else {
                 alert('Usuario no encontrado');
@@ -120,10 +121,18 @@
                             </a>
                         </div>
                         <div class="container_icons">
-                            <li class="li">
+                            <article class="li">
+                                <a href="./home.html">Home</a>
+                            </article>
+                            <article class="li">
+                                <a href="./configuration.html">Configuracion</a>
+                            </article>
+                        </div>
+                        <div class="container_icons">
+                            <article class="li">
                                 <a href="./configuration.html"><img src="./image/Icono ajustes.svg" class="container__icons_img" /></a>
-                            </li>
-                            <li class="li dropdown" style="cursor: pointer;">
+                            </article>
+                            <article class="li dropdown" style="cursor: pointer;">
                                 <div id="profileIcon"><img src="./image/Icono perfil.svg" class="container__icons_img" /></div>
                                 <div id="profileDropdown" class="dropdown-content">
                                     <div class="container_dropdown">
@@ -131,10 +140,10 @@
                                         <h1 class="dropdown_items" id="email"></h1>
                                     </div>
                                 </div>
-                            </li>
-                            <li class="li" style="cursor: pointer;">
+                            </article>
+                            <article class="li" style="cursor: pointer;">
                                 <div id="logout"><img src="./image/Logout icon.svg" class="container__icons_img" /></div>
-                            </li>
+                            </article>
                         </div>
                     </ul>
                 </nav>
