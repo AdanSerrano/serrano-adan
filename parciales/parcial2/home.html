@@ -2,26 +2,42 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+        content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover" />
     <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
-    <div class="card" style="width: 80vw">
-        <div class="card-header">
-            <h1>Profile</h1>
-        </div>
-        <div class="card-body">
-            <p>
-                Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
-                cillum sint consectetur cupidatat.
-            </p>
-        </div>
-        <div class="card-footer"><button id="logout">Logout</button></div>
+    <header id="navbarContainer"></header>
+    <div class="card-header">
+        <h1>Profile</h1>
     </div>
+    <main class="main">
+        <section class="container">
+            <div class="container__div">
+                <form id="form" class="container__form">
+                    <h1>💸 Registrar Transacciones</h1>
+                    <div class="container__form__div">
+                        <label class="form__label">Usuario:</label>
+                        <input type="text" name="username" class="container__form__input form__input" id="inputname"
+                            required />
+                        <label class="form__label">Nueva contraseña:</label>
+                        <input type="password" name="password" class="container__form__input form__input"
+                            id="inputPassword" />
+                        <label class="form__label">Confirmar Contraseña:</label>
+                        <input type="password" name="confimpassword" class="container__form__input form__input"
+                            id="inputConfirmPassword" />
+                        <button type="submit" class="container__div__button">Actualizar</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
     <script src="./js/authentication.js"></script>
     <script src="./js/home.js"></script>
+    <!-- <script src="./js/transactions.js"></script> -->
 </body>
 
 </html>

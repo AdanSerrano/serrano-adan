@@ -1,25 +1,40 @@
 ((Authentication) => {
     const App = {
         htmlElements: {
-            logoutButton: document.getElementById("logout"),
+            inputname: document.getElementById('inputname'),
         },
         init() {
             App.bindEvents();
             App.initialValiations();
+            App.setDefaultValues()
+            App.navbar();
+            App.logout();
+            App.informationUser();
+        },
+        bindEvents() {
+            App.htmlElements.form.addEventListener('submit', App.handlers.onSubmit);
+        },
+        navbar() {
+            Authentication.template.navbar();
+        },
+        logout() {
+            Authentication.logoutSession();
+        },
+        informationUser() {
+            Authentication.getUser();
+        },
+        setDefaultValues() {
+            const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+            if (currentUser) {
+                App.htmlElements.inputname.value = currentUser[0];
+            }
         },
         initialValiations() {
             Authentication.isNotAuthenticated();
         },
         bindEvents() {
-            App.htmlElements.logoutButton.addEventListener(
-                "click",
-                App.handlers.handleLogout,
-            );
         },
         handlers: {
-            handleLogout() {
-                Authentication.logoutSession();
-            },
         },
         methods: {},
         templates: {},

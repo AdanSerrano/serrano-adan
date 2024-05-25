@@ -1,17 +1,37 @@
 ((Authentication) => {
     const App = {
         htmlElements: {
-            form: document.getElementById('form')
+            form: document.getElementById('form'),
+            inputname: document.getElementById('inputname'),
+            inputPassword: document.getElementById('inputPassword'),
+            inputConfirmPassword: document.getElementById('inputConfirmPassword'),
         },
         init() {
-            App.validationData();
+            App.methods.validationData();
+            App.setDefaultValues();
             App.bindEvents();
-        },
-        validationData() {
-            Authentication.isNotAuthenticated();
+            App.navbar();
+            App.logout();
+            App.informationUser();
+
         },
         bindEvents() {
             App.htmlElements.form.addEventListener('submit', App.handlers.onSubmit);
+        },
+        navbar() {
+            Authentication.template.navbar();
+        },
+        logout() {
+            Authentication.logoutSession();
+        },
+        informationUser() {
+            Authentication.getUser();
+        },
+        setDefaultValues() {
+            const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+            if (currentUser) {
+                App.htmlElements.inputname.value = currentUser[0];
+            }
         },
         handlers: {
             onSubmit(event) {
@@ -22,7 +42,17 @@
                     return;
                 }
                 Authentication.configurationUser(username.value, password.value);
-            }
+                App.methods.clearForm();
+            },
+        },
+        methods: {
+            clearForm() {
+                App.htmlElements.inputPassword.value = '';
+                App.htmlElements.inputConfirmPassword.value = '';
+            },
+            validationData() {
+                Authentication.isNotAuthenticated();
+            },
         }
     };
 

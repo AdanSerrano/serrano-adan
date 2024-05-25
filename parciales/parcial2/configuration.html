@@ -3,24 +3,29 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+        content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover" />
     <title>Configuración</title>
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
+    <header id="navbarContainer"></header>
     <main class="main">
         <section class="container">
             <div class="container__div">
                 <form id="form" class="container__form">
                     <h1>⚙️ Configuración</h1>
                     <div class="container__form__div">
-                        <label style="text-align: start; width: 100%;">Usuario:</label>
-                        <input type="text" name="username" class="container__form__input" required />
-                        <label style="text-align: start; width: 100%;">Contraseña:</label>
-                        <input type="password" name="password" class="container__form__input" required />
-                        <label style="text-align: start; width: 100%;">Confirmar Contraseña:</label>
-                        <input type="password" name="confirmpassword" class="container__form__input" required />
+                        <label class="form__label">Usuario:</label>
+                        <input type="text" name="username" class="container__form__input form__input" id="inputname"
+                            placeholder="Usuario" required />
+                        <label class="form__label">Nueva contraseña:</label>
+                        <input type="password" name="password" class="container__form__input form__input"
+                            id="inputPassword" placeholder="******" />
+                        <label class="form__label">Confirmar Contraseña:</label>
+                        <input type="password" name="confirmpassword" class="container__form__input form__input"
+                            id="inputConfirmPassword" placeholder="******" />
                         <button type="submit" class="container__div__button">Actualizar</button>
                     </div>
                 </form>
