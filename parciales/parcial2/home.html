@@ -6,38 +6,74 @@
         content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover" />
     <title>Document</title>
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/tailwind.css">
 </head>
 
 <body>
     <header id="navbarContainer"></header>
-    <div class="card-header">
-        <h1>Profile</h1>
-    </div>
-    <main class="main">
-        <section class="container">
-            <div class="container__div">
-                <form id="form" class="container__form">
-                    <h1>💸 Registrar Transacciones</h1>
-                    <div class="container__form__div">
-                        <label class="form__label">Usuario:</label>
-                        <input type="text" name="username" class="container__form__input form__input" id="inputname"
-                            required />
-                        <label class="form__label">Nueva contraseña:</label>
-                        <input type="password" name="password" class="container__form__input form__input"
-                            id="inputPassword" />
-                        <label class="form__label">Confirmar Contraseña:</label>
-                        <input type="password" name="confimpassword" class="container__form__input form__input"
-                            id="inputConfirmPassword" />
-                        <button type="submit" class="container__div__button">Actualizar</button>
-                    </div>
-                </form>
-            </div>
-        </section>
-    </main>
+    <main>
+        <section class="main">
+            <section class="container">
+                <div class="container__div">
+                    <form id="form" class="container__form"> <!-- Added the id here -->
+                        <h1>💸 Registrar Transacciones</h1>
+                        <div class="container__form__div">
+                            <label class="form__label">Monto:</label>
+                            <input type="text" name="monto" class="container__form__input form__input" id="inputMonto"
+                                required />
+                            <!-- un select que tenga ingreso o egreso para el usuario y que por default tenga seleccionar tipo de transaccion -->
+                            <label class="form__container__label">Tipo de transaccion:</label>
+                            <select name="tipo" class="container__form__input form__input" id="inputTipo">
+                                <option value="0">Seleccionar tipo de transaccion</option>
+                                <option value="1">Ingreso</option>
+                                <option value="2">Egreso</option>
+                            </select>
+                            <label class="form__label">Fecha:</label>
+                            <input type="date" name="fecha" class="container__form__input form__input"
+                                id="inputFecha" />
+                            <label class="form__label">Descripción:</label>
+                            <input type="text" name="descripcion" class="container__form__input form__input"
+                                id="inputDescripcion" />
+                            <button type="submit" class="container__div__button">Actualizar</button>
+                        </div>
+                    </form>
+                </div>
+                </div>
+            </section>
 
+    </main>
+    <section class="container__div__table">
+        <div class="rounded-md border">
+            <div class="relative w-full overflow-auto">
+                <table class="w-full caption-bottom text-sm" id="dataTable">
+                    <thead class="[&amp;_tr]:border-b">
+                        <tr class="border-b transition-colors hover-bg-muted-50 data-state-selected-bg-muted"
+                            data-state="selected">
+                            <th class="h-12 px-4 text-left align-middle font-medium text-muted-foreground"
+                                data-has-role-checkbox="true" data-pr-0="">
+                                <div class="lowercase">Monto</div>
+                            </th>
+                            <th class="h-12 px-4 text-left align-middle font-medium text-muted-foreground"
+                                data-has-role-checkbox="true" data-pr-0="">
+                                <div class="text-center">Tipo</div>
+                            </th>
+                            <th class="h-12 px-4 text-left align-middle font-medium text-muted-foreground"
+                                data-has-role-checkbox="true" data-pr-0="">
+                                <div class="text-center">Fecha</div>
+                            </th>
+                            <th class="h-12 px-4 text-left align-middle font-medium text-muted-foreground"
+                                data-has-role-checkbox="true" data-pr-0="">
+                                <div class="text-right">Descripción</div>
+                            </th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </section>
     <script src="./js/authentication.js"></script>
     <script src="./js/home.js"></script>
-    <!-- <script src="./js/transactions.js"></script> -->
+    <script src="./js/transaction.js"></script>
 </body>
 
 </html>

@@ -28,6 +28,15 @@
 
         },
 
+        registerTransaction(monto, tipo, fecha, descripcion) {
+            const data = { monto, tipo, fecha, descripcion };
+            const transactions = JSON.parse(localStorage.getItem('transactions')) || [];
+            transactions.push(data);
+            localStorage.setItem('transactions', JSON.stringify(transactions));
+            alert('Transacción registrada');
+            window.location.reload();
+        },
+
         configurationUser(username, password) {
             const users = JSON.parse(localStorage.getItem('users')) || [];
             const currentUser = JSON.parse(localStorage.getItem('currentUser'));
