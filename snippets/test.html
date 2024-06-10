@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport"
+        content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./tailwind.css">
+</head>
+
+<body>
+    <header id="navbarContainer"></header>
+    <main>
+        <section class="flex-center p-12">
+            <section class="card">
+                <section class="content_card">
+                    <form id="form" class="p-12">
+                        <h1>💸 Registrar Transacciones</h1>
+                        <section class="form_container">
+                            <label class="label">Monto:</label>
+                            <div class="container_inputs">
+                                <input type="number" name="monto" class="input" id="inputMonto" placeholder="###"
+                                    required />
+                            </div>
+                            <label class="label">Tipo de transaccion:</label>
+                            <div class="container_inputs">
+                                <select name="tipo" class="select" id="inputTipo" required>
+                                    <option value="0">Seleccionar tipo de transacción</option>
+                                    <option value="1">Ingreso</option>
+                                    <option value="2">Egreso</option>
+                                </select>
+                            </div>
+                            <label class="label">Fecha:</label>
+                            <div class="container_inputs">
+                                <input type="date" name="fecha" class="input" id="inputFecha" required />
+                            </div>
+                            <label class="label">Descripción:</label>
+                            <div class="container_inputs">
+                                <input type="text" name="descripcion" class="input" id="inputDescripcion" required />
+                            </div>
+                            <button type="submit" class="button">Actualizar</button>
+                        </section>
+                    </form>
+                </section>
+            </section>
+        </section>
+    </main>
+    <section class="container__div__table">
+        <section class=" border">
+            <article class="rounded-md relative w-full overflow-auto">
+                <table class="w-full caption-bottom text-sm" id="dataTable">
+                    <thead class="[&amp;_tr]:border-b">
+                        <tr class="border-b transition-colors hover-bg-muted-50 data-state-selected-bg-muted"
+                            data-state="selected">
+                            <th class="h-12 px-4 text-left align-middle font-medium text-muted-foreground"
+                                data-has-role-checkbox="true" data-pr-0="">
+                                <div class="lowercase">Monto</div>
+                            </th>
+                            <th class="h-12 px-4 text-left align-middle font-medium text-muted-foreground"
+                                data-has-role-checkbox="true" data-pr-0="">
+                                <div class="text-center">Tipo</div>
+                            </th>
+                            <th class="h-12 px-4 text-left align-middle font-medium text-muted-foreground"
+                                data-has-role-checkbox="true" data-pr-0="">
+                                <div class="text-center">Fecha</div>
+                            </th>
+                            <th class="h-12 px-4 text-left align-middle font-medium text-muted-foreground"
+                                data-has-role-checkbox="true" data-pr-0="">
+                                <div class="text-right">Descripción</div>
+                            </th>
+                        </tr>
+                    </thead>
+                </table>
+            </article>
+            <article id="noDataMessage" style="display: none;" class="text-center text-red-500 py-4">No hay ningún dato
+                registrado.</article>
+        </section>
+    </section>
+    <script src="./js/authentication.js"></script>
+    <script src="./js/home.js"></script>
+    <script src="./js/transaction.js"></script>
+</body>
+
+</html>
