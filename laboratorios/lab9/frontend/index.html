@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Series</title>
+    <link rel="stylesheet" href="../../../snippets/tailwind.css">
+</head>
+
+<body>
+    <main>
+        <section class="flex-center p-12">
+            <section class="card">
+                <section class="content_card">
+                    <form id="form" class="p-12">
+                        <h1>Calcular serie Fibonacci</h1>
+                        <section class="form_container">
+                            <label for="number" class="label">Numero</label>
+                            <div class="container_inputs">
+                                <input type="number" class="input" id="number" name="number" required>
+                            </div>
+                            <button class="button" type="submit">Calcular Numero Fibonacci</button>
+                        </section>
+                    </form>
+                </section>
+            </section>
+        </section>
+        <section id="result" class="container__result">
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
